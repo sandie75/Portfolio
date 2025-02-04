@@ -1,0 +1,91 @@
+@import "../../app.scss";
+
+.hero{
+    //100 vh moins la hauteur de la navbar
+    height: calc(100vh - 100px);
+    //cacher le débordement
+    overflow: hidden;
+    background: #0b0b0b;
+    position: relative;
+
+    .wrapper{
+        max-width: 85%;
+        height: 100%;
+        margin: auto;
+
+        .textContainer{
+            height: 100%;
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 40px;
+
+            @include mobile{
+                height: 50%;
+                width: 100%;
+                gap: 20px;
+                align-items: center;
+                text-align: center;
+            }
+
+            h2{
+                font-size: 30px;
+                color: white;
+                letter-spacing: 10px;
+                font-family: "Noto Serif JP";
+            }
+
+            h1{
+                font-size: 88px;
+                font-family: "Noto Serif JP";
+
+                @include mobile{
+                    font-size: 36px;
+    
+                }
+            }
+
+            button{
+                padding: 20px;
+                border: 1px solid white;
+                background-color: transparent;
+                color: white;
+                margin-right: 20px;
+                cursor: pointer;
+                font-weight: 300;
+                border-radius: 10px;
+                
+            }
+
+            img{
+                width: 50px;
+            }
+        }
+    
+
+
+
+        .imageContainer{
+            height: 100%;
+            position: absolute;
+            top: 0;
+            right: 0;
+            //ajout
+            width: 60%;
+
+            @include mobile{
+                height: 50%;
+                width: 100%;
+                top: unset;
+                bottom: 0;
+            }
+
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+    }
+};
