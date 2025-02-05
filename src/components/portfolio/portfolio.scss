@@ -1,6 +1,6 @@
 @import "../../app.scss";
 
-.portfolio{
+.portfolioContainer{
     position: relative;
 
     .portfolioTitle{
@@ -10,7 +10,9 @@
         padding-top: 10px;
         text-align: center;
         color: white;
-        font-size: 36px;
+        font-size: 24px;
+        background-color: black;
+
 
         @include mobile {
             padding-top: calc(100vh - 100px);
@@ -19,14 +21,15 @@
 
         h1{
             font-family: "Noto Serif JP";
-            font-size: 36px;
+            font-size: 24px;
+            color: #bbbbbb;
         }
 
         .titleBar{
             margin-top: 1%;
             margin-right: 100px;
             margin-left: 100px;
-            height: 2px;
+            height: 1px;
             background-color: #444444;
         }
     }
@@ -90,7 +93,7 @@
                 }
 
                 h2{
-                    font-size: 42px;
+                    font-size: 38px;
                     font-family: "Noto Serif JP";
                     font-weight: 600;
                     line-height: 1.6;

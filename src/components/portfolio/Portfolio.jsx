@@ -64,7 +64,7 @@ const Single = ({ item }) => {
 const Portfolio = () => {
 
     return (
-        <div className="portfolio">
+        <div className="portfolioContainer">
             <div className="portfolioTitle">
                 <h1>Portfolio</h1>
                 <div className="titleBar"></div>

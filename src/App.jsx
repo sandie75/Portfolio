@@ -9,12 +9,14 @@ import Contact from "./components/contact/Contact";
 
 const App = () => {
   return <div>
-    <section id="Homepage">
+    <section id="Accueil">
       <Navbar/>
       <Hero/>
     </section>
-    <section id="about">À propos</section>
-    <Portfolio />
+    <section id="A propos">À propos</section>
+    <div id="Portfolio">
+      <Portfolio />
+    </div>
     <section id="Contact">
       <Contact/>
     </section>
