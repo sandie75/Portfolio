@@ -32,7 +32,7 @@ const Sidebar = () => {
         <motion.div className='sidebar' initial='closed' 
         animate={open ? "open" : "closed"}>
             <motion.div className="bg" variants={variants}>
-                <Links/>
+                <Links setOpen={setOpen}/> 
             </motion.div>
             <Togglebutton setOpen={setOpen}/>
         </motion.div>
@@ -40,3 +40,5 @@ const Sidebar = () => {
 };
 
 export default Sidebar;
+
+/*On a passé setOpen en prop au composant Links pour pouvoir refermer la sidebar au clic sur un lien. */
