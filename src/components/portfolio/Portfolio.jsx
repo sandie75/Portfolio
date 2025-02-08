@@ -7,26 +7,20 @@ const items = [
     {
         id: 1,
         title: "Salle de concert",
-        img: "concert2.png",
+        img: "concert.png",
         description: "Mon tout premier projet. Site d'une salle de concert en javascript vanilla et PHP, crud fonctionnel, maquette réalisée en figma. Ut enim ad minim veniam. Dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.",
     },
     {
         id: 2,
-        title: "Mastermind",
-        img: "forest.jpg",
-        description: "Un jeu mastermind réalisé en react. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
+        title: "Quiz Game of Thrones",
+        img: "quiz.png",
+        description: "Un quiz sur les citations de Game of thrones réalisé en React. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
     },
     {
         id: 3,
-        title: "Quiz Game of Thrones",
-        img: "leaf.jpg",
-        description: "Un quiz sur les citations de Game of thrones réalisé en React. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. Dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.",
-    },
-    {
-        id: 4,
-        title: "Horloge",
-        img: "butterfly.jpg",
-        description: "Une horloge réalisée en javascript. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. Dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.",
+        title: "Mastermind",
+        img: "mastermind.png",
+        description: "Un jeu mastermind réalisé en react. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. Dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.",
     }
     
 ];
@@ -42,13 +36,13 @@ const Single = ({ item }) => {
     const y = useTransform(scrollYProgress, [0,1], [-300, 300]);
 
     return <section >
-        <div className="container">
+        <div className="container2">
             <div className="wrapper">
                 <div className="imageContainer" ref={ref}>
                     <img src={item.img} alt="project picture"/> 
                 </div>
                 <motion.div className="textContainer" style={{y}}>
-                        <h2>{item.title}</h2>
+                        <h2 className="h2portfolio">{item.title}</h2>
                         <p>{item.description}</p>
                         <div className="seeProject">
                             <div className="smallBar"></div>
@@ -66,7 +60,7 @@ const Portfolio = () => {
     return (
         <div className="portfolioContainer">
             <div className="portfolioTitle">
-                <h1>Portfolio</h1>
+                <h1 className="h1portfolio">Portfolio</h1>
                 <div className="titleBar"></div>
             </div>
             {items.map((item) => 
